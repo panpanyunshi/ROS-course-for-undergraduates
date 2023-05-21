@@ -1,0 +1,7 @@
+<launch>
+    <!-- 启动AMCL节点 -->
+    <include file="$(find demo04_slam)/launch/slam_gmapping_pr2.launch" />
+
+    <!-- 运行move_base节点 -->
+    <include file="$(find demo04_slam)/launch/movebase.launch" />
+</launch>
