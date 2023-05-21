@@ -1,0 +1,41 @@
+<!-- gps model-->
+<robot name="my_gps" xmlns:xacro = "http://wiki.ros.org/xacro">
+
+    <xacro:property name = "gps_radius"   value = "0.003" />
+    <xacro:property name = "gps_height"  value = "0.05" />
+    
+    <xacro:property name = "gps_m"       value = "0.1"  /> <!-- weight -->
+    
+    <xacro:property name = "gps_x"       value =  "-0.04"/>
+    <xacro:property name = "gps_y"       value =  "-0.04"/>
+    <xacro:property name = "gps_z"       value =  "${base_link_length / 2 + gps_height / 2}"/>
+    
+    <link name="gps">
+        <visual>
+            <geometry>
+                <cylinder radius="${gps_radius}" length="${gps_height}" />
+            </geometry>
+            <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+            <material name="green"><color rgba="0.0 1.0 0.0 0.0"/> <!-- green -->
+            </material>
+        </visual>
+        <collision>
+            <geometry>
+                <cylinder radius="${gps_radius}" length="${gps_height}" />
+            </geometry>
+            <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+        </collision>
+        <xacro:cylinder_inertial_matrix m="${laser_m}" r="${gps_radius}" h="${gps_height}" />
+    </link>
+    
+    <joint name="gps2base_link" type="fixed">
+        <parent link="base_link"/>
+        <child  link="gps"/>
+        <origin xyz="${gps_x} ${gps_y} ${gps_z}" rpy="0.0 0.0 0.0"/>
+    </joint>
+    
+    <gazebo reference = "gps" >
+        <material>Gazebo/Black</material> <!-- green -->
+    </gazebo>
+    
+    </robot>

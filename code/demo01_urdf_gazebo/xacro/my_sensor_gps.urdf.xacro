@@ -1,0 +1,27 @@
+<!-- hector gps-->
+<robot name="my_sensors" xmlns:xacro="http://wiki.ros.org/xacro"> <!-- 单线-->
+    <gazebo>
+        <plugin name="gps" filename="libhector_gazebo_ros_gps.so">
+            <updateRate>1</updateRate>
+            <bodyName>gps</bodyName> <!-- 与名为"laser"的link绑定,name of the body the GNSS receiver is attached to -->
+
+            <robotNamespace>gps</robotNamespace>
+            <topicName>fix</topicName> <!-- defalt-->
+            <velocityTopicName>fix_velocity</velocityTopicName> <!-- defalt-->
+
+            <referenceLatitude>-30.06022459407145675</referenceLatitude>
+            <referenceLongitude>-51.173913575780311191</referenceLongitude>
+            <referenceHeading>90</referenceHeading>
+            <referenceAltitude>10</referenceAltitude>
+            <offset>0 0 0</offset>
+            <drift>0.001 0.001 0.001</drift>
+            <gaussianNoise>0.0 0.0 0.0</gaussianNoise>
+            <velocityDrift>0.001 0.001 0.001</velocityDrift>
+            <velocityGaussianNoise>0 0 0</velocityGaussianNoise>
+
+            <frameId>gps</frameId>
+        </plugin>
+    </gazebo>
+</robot>
+
+<!--http://wiki.ros.org/hector_gazebo_plugins -->
