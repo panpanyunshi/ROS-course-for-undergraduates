@@ -6,6 +6,8 @@
 
 > build the project in  2023.05.21
 > add the code in 2023.05.21
-
+> add the document of Chapter 1-4 in 2024.05.23
 
 ## <span style="color:blue">to be continue ...</span>
+
+
