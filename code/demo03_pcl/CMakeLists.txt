@@ -166,6 +166,13 @@ target_link_libraries(planar_segmentation ${catkin_LIBRARIES})
 
 add_executable(kdtree_search src/kdtree_search.cpp)
 target_link_libraries(kdtree_search ${catkin_LIBRARIES})
+
+add_executable(VoxelGrid_filter src/VoxelGrid_filter.cpp)
+target_link_libraries(VoxelGrid_filter ${catkin_LIBRARIES})
+
+add_executable(pcl_ransacr src/pcl_ransac.cpp)
+target_link_libraries(pcl_ransac ${catkin_LIBRARIES})
+
 #############
 ## Install ##
 #############
