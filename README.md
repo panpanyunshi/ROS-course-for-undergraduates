@@ -41,9 +41,6 @@ ROS机器人操作系统是适用于机器人的开源元操作系统，提供�
 6. ROS自主导航
 7. 期末比测
 
-## 课程特点
-
-
 ## 参考资料
 - [ros wiki](http://wiki.ros.org/)
 - [古月居ROS入门21讲](https://www.bilibili.com/video/BV1zt411G7Vn/?vd_source=c9bcb8c89e65b8e51a3b2d704ba1e6d6)
