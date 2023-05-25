@@ -164,6 +164,10 @@ target_link_libraries(image_to_binary ${catkin_LIBRARIES} ${OpenCV_LIBRARIES})
 
 add_executable(image_face_detect src/image_face_detect.cpp)
 target_link_libraries(image_face_detect ${catkin_LIBRARIES} ${OpenCV_LIBRARIES})
+
+add_executable(image_filp src/image_filp.cpp)
+target_link_libraries(image_filp ${catkin_LIBRARIES} ${OpenCV_LIBRARIES})
+
 #############
 ## Install ##
 #############
