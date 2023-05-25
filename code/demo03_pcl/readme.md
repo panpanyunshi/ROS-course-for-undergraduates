@@ -18,14 +18,16 @@ pcl_ros2pcl_and_voxelFilter.cpp
 ### 点云分割（数据集）
 `rosrun demo03_pcl planar_segmentation`
 
+
 ### 点云滤波(ROS仿真环境)
 #### cd demo01_urdf_gazebo 目录下
-`roslaunch`
+`roslaunch demo01_urdf_gazebo display_xacro_gazebo_sensor_all.launch`
 #### cd demo03_pcl 目录下
 `rosrun demo03_pcl pcl_ransac`
 
+
 ### 点云分割（ROS仿真环境）
 #### cd demo01_urdf_gazebo 目录下
-`roslaunch` 
+`roslaunch demo01_urdf_gazebo display_xacro_gazebo_sensor_all.launch`
 #### cd demo03_pcl 目录下
 `rosrun demo03_pcl VoxelGrid_filter`
