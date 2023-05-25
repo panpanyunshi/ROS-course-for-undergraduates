@@ -1,15 +1,12 @@
 
-<!DOCTYPE html>
-<html>
-<head>
+
 <style>
 rjp {
     color: blue;
     font-family: Arial;
 }
 </style>
-</head>
-<body>
+
 
 ## **课程名称：机器人操作系统**
 ![这是图片](../material/ros_org.png "ROS logo")
