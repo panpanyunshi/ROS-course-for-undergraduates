@@ -16,6 +16,9 @@ rosrun demo02_opencv image_to_binary
 roslaunch usb_cam usb_cam-test.launch
 rosrun demo02_opencv image_face_detect
 ```
-、、、
-aaa
-、、、
+### 图片翻转
+
+```
+rosrun demo02_opencv image_flip
+rqt_image_view
+```
