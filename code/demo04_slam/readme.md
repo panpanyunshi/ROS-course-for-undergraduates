@@ -3,7 +3,7 @@
 - `movebase_start_with_map.launch `演示基于move_base的路径规划
 
 ### 1 gmapping 功能包安装
-`sudo apt install ros-<ROS版本>-gmapping`
+`sudo apt install ros-${ROS_DISTRO}-gmapping`
 
 ### 2 cartorgrapher 功能包安装与编译
 #### 2.1 安装辅助工具
@@ -39,7 +39,7 @@ sudo apt-get remove ros-${ROS_DISTRO}-abseil-cpp
 catkin_make_isolated --install --use-ninja
 ```
 #### 2.5 运行官方数据集进行测试
-- 首先下载别人已经录制好的bag包：
+- 首先下载官方 https://google-cartographer-ros.readthedocs.io/en/latest/data.html 提供的数据包：
 ```
 wget -P ~/Downloads https://storage.googleapis.com/cartographer-public-data/bags/backpack_2d/cartographer_paper_deutsches_museum.bag
 ```
