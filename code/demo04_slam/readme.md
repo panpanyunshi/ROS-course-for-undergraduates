@@ -20,7 +20,7 @@ wstool merge -t src https://raw.githubusercontent.com/cartographer-project/carto
 wstool update -t src
 ```
 #### 2.3 安装cartographer_ros的依赖项
-- 首先，我们使用rosdep来安装所需的软件包。如果你在安装ROS后已经执行了'sudo rosdep init'命令，将打印出一个错误。这个错误可以被忽略。
+- 首先，我们使用rosdep来安装所需的软件包。如果你在安装ROS后已经执行了 `sudo rosdep init` 命令，将打印出一个错误。这个错误可以被忽略。
 ```
 sudo rosdep init
 rosdep update
