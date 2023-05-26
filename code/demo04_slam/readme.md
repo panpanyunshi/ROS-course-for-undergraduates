@@ -38,3 +38,48 @@ sudo apt-get remove ros-${ROS_DISTRO}-abseil-cpp
 ```
 catkin_make_isolated --install --use-ninja
 ```
+#### 2.5 运行官方数据集进行测试
+- 首先下载别人已经录制好的bag包：
+```
+wget -P ~/Downloads https://storage.googleapis.com/cartographer-public-data/bags/backpack_2d/cartographer_paper_deutsches_museum.bag
+```
+- 运行cartographer来创建地图，在终端输入如下命令：
+```
+source ~/cartographer_ws/install_isolated/setup.bash
+roslaunch cartographer_ros demo_backpack_2d.launch bag_filename:=${HOME}/Downloads/cartographer_paper_deutsches_museum.bag
+```
+### 3 LIO-SAM 功能包安装与编译
+#### 3.1 安装依赖
+- ROS
+```
+sudo apt-get install -y ros-noetic-navigation
+sudo apt-get install -y ros-noetic-robot-localization
+sudo apt-get install -y ros-noetic-robot-state-publisher
+```
+- 安装gtsam 4.0.3(noetic推荐安装版本>=4.0.3)
+```
+git clone -b 4.0.3 https://github.com/borglab/gtsam.git
+mkdir build && cd build
+cmake -DGTSAM_BUILD_WITH_MARCH_NATIVE=OFF ..
+sudo make install -j4
+```
+#### 3.2 创建一个新的 LIO-SAM 工作空间
+```
+mkdir lio-sam_ws
+cd lio-sam_ws
+wstool init src
+cd src
+git clone https://github.com/TixiaoShan/LIO-SAM.git
+cd ..
+catkin_make
+```
+#### 3.3 运行官方数据集进行测试
+- LIO-SAM的github首页 https://github.com/TixiaoShan/LIO-SAM 提供了很多的数据集可供下载
+- 启动程序运行示例数据：
+```
+# 启动lio-sam功能包
+roslaunch lio_sam run.launch
+# 播放数据集
+rosbag play outdoor.bag
+```
+
