@@ -27,8 +27,14 @@ rosdep update
 rosdep install --from-paths src --ignore-src --rosdistro=${ROS_DISTRO} -y
 ```
 - Cartographer使用abseil-cpp库，需要使用这个脚本手动安装：
-`sudo apt-get remove ros-${ROS_DISTRO}-abseil-cpp`
+```
+sudo apt-get remove ros-${ROS_DISTRO}-abseil-cpp
+```
 - ros中其实也有一个abseil库，如果编译过程中造成混乱，可以把原来的库给删了
-`sudo apt-get remove ros-${ROS_DISTRO}-abseil-cpp`
+```
+sudo apt-get remove ros-${ROS_DISTRO}-abseil-cpp
+```
 #### 2.4 安装与编译
-`catkin_make_isolated --install --use-ninja`
+```
+catkin_make_isolated --install --use-ninja
+```
