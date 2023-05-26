@@ -21,3 +21,14 @@ wstool update -t src
 ```
 #### 2.3 安装cartographer_ros的依赖项
 - 首先，我们使用rosdep来安装所需的软件包。如果你在安装ROS后已经执行了'sudo rosdep init'命令，将打印出一个错误。这个错误可以被忽略。
+```
+sudo rosdep init
+rosdep update
+rosdep install --from-paths src --ignore-src --rosdistro=${ROS_DISTRO} -y
+```
+- Cartographer使用abseil-cpp库，需要使用这个脚本手动安装：
+`sudo apt-get remove ros-${ROS_DISTRO}-abseil-cpp`
+- ros中其实也有一个abseil库，如果编译过程中造成混乱，可以把原来的库给删了
+`sudo apt-get remove ros-${ROS_DISTRO}-abseil-cpp`
+#### 2.4 安装与编译
+`catkin_make_isolated --install --use-ninja`
