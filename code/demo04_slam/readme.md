@@ -82,4 +82,12 @@ roslaunch lio_sam run.launch
 # 播放数据集
 rosbag play outdoor.bag
 ```
-
+#### 3.4 在仿真环境运行 LIO-SAM 建图
+- 基于章节三、四创建的模型和配置的传感器
+```
+# 启动Gazebo仿真环境
+roslaunch demo01_urdf_gazebo display_xacro_gazebo_sensor_all.launch
+# `cd lio-sam_ws`启动lio-sam功能包
+roslaunch lio_sam run.launch
+```
+<img width="549" alt="0166f08c889d984a0277ad015471cf4" src="https://github.com/Bonener/ROS-course-for-undergraduates/assets/97874549/702ee2e6-8cc9-4e47-b22a-36c4e6c6adac">
