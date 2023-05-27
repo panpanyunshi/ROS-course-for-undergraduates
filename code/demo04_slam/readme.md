@@ -97,7 +97,7 @@ roslaunch lio_sam run.launch
 ## 视觉SLAM
 ### 1 ORB_SLAM3 功能包安装与使用
 #### 1.1 安装依赖
-- Pangolin安装，若关于Pangolin相关依赖缺失，参考 https://github.com/stevenlovegrove/Pangolin 安装
+- Pangolin安装，若关于Pangolin相关依赖缺失，参考 [Pangolin](https://github.com/stevenlovegrove/Pangolin) 安装
 ```
 git clone https://github.com/stevenlovegrove/Pangolin.git
 cd Pangolin
@@ -106,7 +106,7 @@ cd build
 cmake ..
 cmake --build .
 ```
-- OpenCV安装，源码要求OpenCV 3.2及以上，官网下载源码：https://opencv.org/releases/ 以3.4.3版本为例
+- OpenCV安装，源码要求OpenCV 3.2及以上，官网下载源码：[OpenCV](https://opencv.org/releases/) 以3.4.3版本为例
 解压 `unzip opencv-3.4.3.zip`
 安装依赖 `sudo apt-get install build-essential libgtk2.0-dev libavcodec-dev libavformat-dev libjpeg.dev libtiff4.dev libswscale-dev libjasper-dev`
 ```
@@ -146,7 +146,7 @@ sudo make install
 #安装后,头文件安装在/usr/local/include/eigen3/
 ```
 - boost库安装
-由此链接进入boost官网：https://www.boost.org/ ，下载源码，以版本1.7.5为例
+由此链接进入boost官网：[boost](https://www.boost.org/) ，下载源码，以版本1.7.5为例
 下载之后解压：
 ```
 tar -xzvf boost_1_75_0.tar.gz
@@ -177,7 +177,7 @@ chmod +x build.sh
 sudo apt-get install ros-noetic-rtabmap-ros
 ```
 #### 2.2 运行官方数据集
-- 下载 https://docs.google.com/uc?id=0B46akLGdg-uadXhLeURiMTBQU28&export=download
+- 下载 [demo_mapping.bag](https://docs.google.com/uc?id=0B46akLGdg-uadXhLeURiMTBQU28&export=download)
 - 播放数据集
 ```
 roslaunch rtabmap_demos demo_robot_mapping.launch
