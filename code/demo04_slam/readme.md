@@ -166,3 +166,11 @@ cd ORB_SLAM3
 chmod +x build.sh
 ./build.sh
 ```
+- 数据集下载地址：kmavvisualinertialdatasets – ASL Datasets
+- 运行 orbslam3 来创建地图
+```
+>> ./Monocular/mono_euroc ../Vocabulary/ORBvoc.txt ./Monocular/EuRoC.yaml ../dataset/MH01 ./Monocular/EuRoC_TimeStamps/MH01.txt
+```
+
+
+
