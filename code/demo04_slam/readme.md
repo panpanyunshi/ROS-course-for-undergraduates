@@ -166,11 +166,22 @@ cd ORB_SLAM3
 chmod +x build.sh
 ./build.sh
 ```
-- 数据集下载地址：kmavvisualinertialdatasets – ASL Datasets
+- 数据集下载地址：[kmavvisualinertialdatasets – ASL Datasets](https://projects.asl.ethz.ch/datasets/doku.php?id=kmavvisualinertialdatasets#downloads)
 - 运行 orbslam3 来创建地图
 ```
 >> ./Monocular/mono_euroc ../Vocabulary/ORBvoc.txt ./Monocular/EuRoC.yaml ../dataset/MH01 ./Monocular/EuRoC_TimeStamps/MH01.txt
 ```
-
+### 2 rtabmap 功能包安装与编译
+#### 2.1 二进制安装
+```
+sudo apt-get install ros-noetic-rtabmap-ros
+```
+#### 2.2 运行官方数据集
+- 下载 https://docs.google.com/uc?id=0B46akLGdg-uadXhLeURiMTBQU28&export=download
+- 播放数据集
+```
+roslaunch rtabmap_demos demo_robot_mapping.launch
+rosbag play --clock demo_mapping.bag
+```
 
 
