@@ -1,8 +1,5 @@
-# **ROS course for undergraduates**
-
-### the School of Automation, Chongqing University  
-### 教师信息：[江涛](https://github.com/panpanyunshi)
-### 助教信息：熊祖明, 张博文
+# **Robot Operation System**
+Course "Robot Operation System" in 2023 spring at Chongqing University.
 
 <br>
 
@@ -52,6 +49,7 @@ ROS机器人操作系统是适用于机器人的开源元操作系统，提供�
 本课程考核包括平时作业和程序，期末大比测，以及结题汇报。  
 
 ## 信息反馈
-限于作者的知识水平，难免有不妥和错误之处，恳请不吝批评和指正。  
-江涛, jiangtao_1992@cqu.edu.cn  
-
+限于作者的知识水平，难免有不妥和错误之处，恳请不吝批评和指正。   
+### the School of Automation, Chongqing University  
+### 教师信息：[江涛](https://github.com/panpanyunshi)
+### 助教信息：熊祖明, 张博文
