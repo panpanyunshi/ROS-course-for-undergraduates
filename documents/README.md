@@ -12,7 +12,7 @@ rjp {
 ![这是图片](../material/ros_org.png "ROS logo")
 
 ## **文件简介**
-机器人操作系统相关课件ppt资料，包含chapter01到chapter06。
+机器人操作系统相关课件ppt资料，包含chapter 1到chapter 6。
 
 ## **课程内容**  
 1. **ROS机器人操作系统简介**
