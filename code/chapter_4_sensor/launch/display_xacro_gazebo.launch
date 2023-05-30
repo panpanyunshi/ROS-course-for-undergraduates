@@ -1,0 +1,13 @@
+<launch>
+    <!-- 将 Urdf 文件的内容加载到参数服务器 -->
+    <param name="robot_description" command="$(find xacro)/xacro.py $(find chapter_4_sensor)/xacro/my_base_camera_laser.urdf.xacro" />
+
+    <!-- 启动 gazebo -->
+    <!-- <include file="$(find gazebo_ros)/launch/empty_world.launch" /> -->
+    <include file="$(find gazebo_ros)/launch/empty_world.launch">
+        <arg name="world_name" value="$(find chapter_4_sensor)/worlds/hello.world" />
+    </include>
+
+    <!-- 在 gazebo 中显示机器人模型 -->
+    <node pkg="gazebo_ros" type="spawn_model" name="model" args="-urdf -model my_car -param robot_description"  />
+</launch>
