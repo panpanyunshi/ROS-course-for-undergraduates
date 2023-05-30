@@ -168,12 +168,6 @@ add_executable(go_target src/go_target.cpp)
 target_link_libraries(go_target ${catkin_LIBRARIES})
 
 # the fourth topic
-add_executable(turtle_ctr
-  src/turtle_ctr.cpp
-)
-target_link_libraries(turtle_ctr
-${catkin_LIBRARIES}
-)
 
 
 
