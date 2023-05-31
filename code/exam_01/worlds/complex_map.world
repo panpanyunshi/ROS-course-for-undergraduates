@@ -1807,7 +1807,6 @@
       <static>1</static>
     </model>
 
-    <population name="obs_population2">
     <model name='unit_box'>
       <pose frame=''>39.5229 0.26792 0.5 0 -0 0</pose>
       <link name='link'>
@@ -1859,16 +1858,9 @@
         <enable_wind>0</enable_wind>
         <kinematic>0</kinematic>
       </link>
+      
+       <plugin name="random_box" filename="./librandom_box.so"/>   
     </model>
-    <pose>30.5 0 0 0 0 0</pose>
-    <box>
-      <size>14 10 0.01</size>
-    </box>
-    <model_count>1</model_count>
-    <distribution>
-      <type>random</type>
-    </distribution>
-    </population>
 
     <!-- Testing the automatic population of objects -->
     <population name="obs_population1">

@@ -1,9 +1,0 @@
-<launch>
-    <node pkg="move_base" type="move_base" respawn="false" name="move_base" output="screen" clear_params="true">
-        <rosparam file="$(find demo04_slam)/param/costmap_common_params.yaml" command="load" ns="global_costmap" />
-        <rosparam file="$(find demo04_slam)/param/costmap_common_params.yaml" command="load" ns="local_costmap" />
-        <rosparam file="$(find demo04_slam)/param/local_costmap_params.yaml" command="load" />
-        <rosparam file="$(find demo04_slam)/param/global_costmap_params.yaml" command="load" />
-        <rosparam file="$(find demo04_slam)/param/base_local_planner_params.yaml" command="load" />
-    </node>
-</launch>

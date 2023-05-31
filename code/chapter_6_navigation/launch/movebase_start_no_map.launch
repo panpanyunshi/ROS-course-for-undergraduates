@@ -1,0 +1,7 @@
+<launch>
+    <!-- 启动AMCL节点 -->
+    <include file="$(find chapter_6_navigation)/launch/slam_gmapping_pr2.launch" />
+
+    <!-- 运行move_base节点 -->
+    <include file="$(find chapter_6_navigation)/launch/movebase.launch" />
+</launch>
